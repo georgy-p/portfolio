@@ -1,7 +1,11 @@
 :root {
     --font-family: 'Roboto', sans-serif;
     --second-family: 'Open sans', sans-serif;
+
     --content-width: 1152px;
+    --container-offset: 15px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
     --font-size-xxl: 58px;
     --font-size-xl: 48px;
     --font-size-l: 32px;
