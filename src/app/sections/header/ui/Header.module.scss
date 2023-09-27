@@ -1,14 +1,10 @@
 .Header {
     width: 100%;
+    padding-top: 20px;
+    margin-left: auto;
 }
 
-.list {
+.icons {
     display: flex;
-    font-family: var(--second-family);
-    color: var(--secont-color);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex-direction: row;
-    justify-content: flex-end;
+    gap: 5px;
 }

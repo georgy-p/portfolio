@@ -1,58 +1,24 @@
 import cls from './Header.module.scss';
-export const Header: React.FC = () => {
-    const handleClick = (id: string): void => {
-        alert(id);
-    };
+import { Container } from 'app/shared/container';
+import { Navbar } from 'app/sections/header/navbar';
+import Github from 'app/assets/icons/github.svg';
+import Telegram from 'app/assets/icons/telegram.svg';
+import Linkedin from 'app/assets/icons/linkedin.svg';
+import cn from 'classnames';
 
+export const Header: React.FC = () => {
     return (
         <header className={cls.Header}>
-            <ul className={cls.list}>
-                <li className={cls.item}>
-                    <button
-                        onClick={() => {
-                            handleClick('home');
-                        }}
-                    >
-                        Главная
-                    </button>
-                </li>
-                <li className={cls.item}>
-                    <button
-                        onClick={() => {
-                            handleClick('about');
-                        }}
-                    >
-                        Обо мне
-                    </button>
-                </li>
-                <li className={cls.item}>
-                    <button
-                        onClick={() => {
-                            handleClick('stack');
-                        }}
-                    >
-                        Стэк
-                    </button>
-                </li>
-                <li className={cls.item}>
-                    <button
-                        onClick={() => {
-                            handleClick('projects');
-                        }}
-                    >
-                        Проекты
-                    </button>
-                </li>
-                <li className={cls.item}>
-                    <button
-                        onClick={() => {
-                            handleClick('contacts');
-                        }}
-                    >
-                        Контакты
-                    </button>
-                </li>
-            </ul>
+            <Container
+                className={cn('flex', 'row', 'flex-end', 'align-center')}
+            >
+                <Navbar />
+                <div className={cls.icons}>
+                    <Github />
+                    <Telegram />
+                    <Linkedin />
+                </div>
+            </Container>
         </header>
     );
 };
