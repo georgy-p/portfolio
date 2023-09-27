@@ -53,3 +53,35 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.grid {
+    .grid {
+        display: grid;
+        column-gap: var(--offset);
+        grid-template-columns: repeat(6, 1fr);
+
+        @include small-tablet {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
