@@ -1,7 +1,7 @@
 import cls from './Navbar.module.scss';
 
 const navLinks = {
-    home: 'Главная',
+    projects: 'Проекты',
     about: 'Обо мне',
     contacts: 'Контакты',
 };
@@ -11,18 +11,22 @@ const handleClick = (id: string): void => {
 };
 export const Navbar = () => {
     return (
-        <ul className={cls.Navbar}>
-            {Object.entries(navLinks).map(([link, name]) => (
-                <li key={link} className={cls.item}>
-                    <button
-                        onClick={() => {
-                            handleClick(link);
-                        }}
-                    >
-                        {name}
-                    </button>
-                </li>
-            ))}
-        </ul>
+        <div className={cls.list}>
+            <ul className={cls.Navbar}>
+                {Object.entries(navLinks).map(([link, name]) => (
+                    <li key={link}>
+                        <a
+                            className={cls.link}
+                            href={`/${link}`}
+                            onClick={() => {
+                                handleClick(link);
+                            }}
+                        >
+                            {name}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 };
