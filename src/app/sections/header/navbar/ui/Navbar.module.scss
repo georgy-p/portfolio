@@ -1,12 +1,30 @@
+@import '/src/app/styles/mixins';
+
 .Navbar {
     display: flex;
-    font-family: var(--second-family);
-    color: var(--secont-color);
-    list-style: none;
-    margin: 0;
-    padding: 0;
     flex-direction: row;
     justify-content: flex-end;
+    padding: 0 50px 0 0;
+    margin: 0;
+    color: var(--second-color);
+    font-family: var(--second-family);
     gap: 50px;
-    padding-right: 50px;
+    list-style: none;
+
+    @include mobile {
+        gap: 15px;
+        padding-right: 15px;
+    }
+}
+
+.list {
+    grid-column: 4 / 2 span;
+}
+
+.link {
+    color: var(--second-color);
+
+    &:hover {
+        @include gradient;
+    }
 }
