@@ -6,5 +6,9 @@ type Props = {
     className?: string;
 };
 export const Container: FC<Props> = ({ children, className }) => {
-    return <div className={`${cls.Container} ${className}`}>{children}</div>;
+    return (
+        <section className={`${cls.Container} ${className}`}>
+            {children}
+        </section>
+    );
 };
