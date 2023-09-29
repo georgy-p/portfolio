@@ -1,0 +1,29 @@
+@import '/src/app/styles/mixins';
+
+.Footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    border-top: solid 0.5px;
+    border-bottom-color: var(--second-color);
+  gap: 30px;
+
+  @include tablet {
+    flex-wrap: wrap;
+
+  }
+}
+
+.mail {
+    color: var(--second-color);
+
+    &:hover {
+        @include gradient;
+    }
+}
+
+.copyright {
+    color: var(--second-color);
+}
