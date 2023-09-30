@@ -13,7 +13,7 @@
     padding-top: 30px;
     gap: 30px;
     
-    @include tablet {
+    @include laptop {
         grid-template-columns: repeat(4, 1fr);
     }
 
