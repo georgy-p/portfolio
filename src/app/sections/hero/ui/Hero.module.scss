@@ -8,8 +8,9 @@
 }
 
 .inner_container {
+    padding-left: 50px;
     @include tablet {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 
     @include small-tablet {
@@ -36,6 +37,9 @@
     font-weight: bold;
     grid-column: 3 / 3 span;
 
+    @include tablet {
+        // grid-column: 2 / 2 span;
+    }
 
     @include small-tablet {
         grid-column: 2 / 2 span;
